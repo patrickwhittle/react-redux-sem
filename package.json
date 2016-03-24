@@ -1,0 +1,40 @@
+{
+  "name": "react-redux-sem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jspm": "^0.16.31",
+    "jspm-git": "^0.4.4"
+  },
+  "jspm": {
+    "dependencies": {
+      "ba-common-interface-js": "ba-git:ba-common-interface-js@1.0.5",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "immutable": "npm:immutable@^3.7.6",
+      "normalizr": "npm:normalizr@^2.0.0",
+      "react": "npm:react@^0.14.7",
+      "react-bootstrap": "npm:react-bootstrap@^0.28.3",
+      "react-dom": "npm:react-dom@^0.14.7",
+      "react-redux": "npm:react-redux@^4.4.1",
+      "react-router": "npm:react-router@^2.0.1",
+      "react-router-redux": "npm:react-router-redux@^4.0.0",
+      "redux": "npm:redux@^3.3.1",
+      "redux-form": "npm:redux-form@^4.2.2",
+      "redux-thunk": "npm:redux-thunk@^2.0.1",
+      "reselect": "npm:reselect@^2.2.1",
+      "url": "npm:url@^0.11.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
