@@ -1,25 +1,25 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import url from 'url'
-import RoomPrice from '../containers/RoomPrice'
-import { fetchRoomPrice } from '../actions/actions'
+import RoomPrices from '../containers/RoomPrices'
+import { fetchRoomPrices } from '../actions/actions'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchRoomPrice: (hotelId, guideId, roomPriceId) => dispatch(fetchRoomPrice(hotelId, guideId, roomPriceId))
+    fetchRoomPrices: (hotelId, guideId) => dispatch(fetchRoomPrices(hotelId, guideId))
   }
 }
 
 class App extends React.Component {
 
   componentDidMount() {
-    const { hotel_id, guide_id, rp } = url.parse(window.location.href, true).query
-    this.props.fetchRoomPrice(hotel_id, guide_id, rp)
+    const { hotel_id, guide_id } = url.parse(window.location.href, true).query
+    this.props.fetchRoomPrices(hotel_id, guide_id)
   }
 
   render() {
     return (
-      <RoomPrice />
+      <RoomPrices />
     )
   }
 

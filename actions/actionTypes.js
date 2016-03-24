@@ -1,2 +1,2 @@
-export const SET_ROOM_PRICE = 'SET_ROOM_PRICE'
+export const SET_ROOM_PRICES = 'SET_ROOM_PRICES'
 

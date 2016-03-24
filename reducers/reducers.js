@@ -1,9 +1,9 @@
-import { SET_ROOM_PRICE } from '../actions/actionTypes'
+import { SET_ROOM_PRICES } from '../actions/actionTypes'
 
-export const roomPrice = (state={}, action) => {
+export const roomPrices = (state=[], action) => {
   switch (action.type) {
-    case SET_ROOM_PRICE:
-      return action.roomPrice
+    case SET_ROOM_PRICES:
+      return action.roomPrices
     default:
       return state
   }

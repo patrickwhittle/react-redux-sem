@@ -1,20 +1,22 @@
-import { SET_ROOM_PRICE } from './actionTypes'
+import { SET_ROOM_PRICES } from './actionTypes'
 import RoomPrice from 'ba-common-interface-js/com/bookassist/model/RoomPrice'
+import Restables from 'ba-common-interface-js/com/bookassist/model/Restables'
 
-export const setRoomPrice = (roomPrice) => {
+export const setRoomPrices = (roomPrices) => {
   return {
-    type: SET_ROOM_PRICE,
-    roomPrice
+    type: SET_ROOM_PRICES,
+    roomPrices
   }
 }
 
-export const fetchRoomPrice = (hotelId, guideId, roomPriceId) => {
+export const fetchRoomPrices = (hotelId, guideId) => {
   return (dispatch) => {
-    return new RoomPrice().get({
-      url: `http://rw.bookassist.com/rest/super/${guideId}/${hotelId}/room_price/${roomPriceId}` 
+    const restables = new Restables(RoomPrice)
+    return restables.get({
+      url: `http://rw.bookassist.com/rest/super/${guideId}/${hotelId}/room_price` 
     })
-    .then(roomPrice => roomPrice.toObject())
-    .then(roomPrice => dispatch(setRoomPrice(roomPrice)))
+    .then(roomPrices => roomPrices.toObject())
+    .then(roomPrices => dispatch(setRoomPrices(roomPrices)))
   }
 }
 
